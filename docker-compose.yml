@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: .
+    image: nginx:1.27.3
+    container_name: portfolio-web
+    ports:
+      - "80:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    networks:
+      - tunnel
+
+networks:
+  tunnel:
+    external: true
