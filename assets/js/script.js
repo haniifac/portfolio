@@ -14,6 +14,13 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+// remove active class on resize for desktop
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 1250) {
+    sidebar.classList.remove("active");
+  }
+});
+
 
 
 // testimonials variables
