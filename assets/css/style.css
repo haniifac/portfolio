@@ -1834,11 +1834,28 @@ textarea.form-input::-webkit-resizer { display: none; }
   .sidebar {
     position: sticky;
     top: 60px;
-    max-height: max-content;
-    height: 100%;
+    max-height: calc(100vh - 70px);
     margin-bottom: 0;
     padding-top: 60px;
+    padding-bottom: 60px;
     z-index: 1;
+    overflow-y: auto;
+  }
+
+  .sidebar::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 5px;
+  }
+
+  .sidebar::-webkit-scrollbar-thumb {
+    background: hsla(45, 100%, 72%, 0.2);
+    border-radius: 10px;
+    border: 6px solid transparent;
+    background-clip: content-box;
   }
 
   .sidebar-info { flex-direction: column; }
