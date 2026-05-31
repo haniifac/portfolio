@@ -844,35 +844,42 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skill-subtitle {
+  margin: 30px 0 15px;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  color: var(--vegas-gold);
+}
 
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 0 20px;
+}
 
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skill .title-wrapper {
+.skills-item {
+  background: var(--bg-gradient-jet);
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid var(--jet);
+  box-shadow: var(--shadow-1);
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+  gap: 12px;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+
+.skills-item img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* Makes the icons white */
 }
 
-.skill-progress-bg {
-  background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
-}
-
-.skill-progress-fill {
-  background: var(--text-gradient-yellow);
-  height: 100%;
-  border-radius: inherit;
+.skills-item .h5 {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin: 0;
 }
 
 
@@ -1506,8 +1513,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: -43px;
   }
 
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
-
 
 
   /**
@@ -1546,6 +1551,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .form-btn ion-icon { font-size: 18px; }
+
+  .skills-list { grid-template-columns: repeat(2, 1fr); }
 
 }
 
@@ -1646,7 +1653,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: max-content;
     margin-left: auto;
   }
-  
+
+  .skills-list { grid-template-columns: repeat(4, 1fr); }
+
 }
 
 
