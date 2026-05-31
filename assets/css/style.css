@@ -869,14 +869,8 @@ main {
   gap: 12px;
 }
 
-
-.skills-item img {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) invert(1); /* Makes the icons white */
-}
-
 .skills-item .h5 {
+
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
   margin: 0;
